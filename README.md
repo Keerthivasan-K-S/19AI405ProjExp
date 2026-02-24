@@ -30,7 +30,6 @@ def solve(grid, row, col, num):
         if grid[x][col] == num:
             return False
  
- 
     startRow = row - row % 3
     startCol = col - col % 3
     for i in range(3):
@@ -40,7 +39,6 @@ def solve(grid, row, col, num):
     return True
  
 def Suduko(grid, row, col):
- 
     if (row == M - 1 and col == M):
         return True
     if col == M:
@@ -57,7 +55,7 @@ def Suduko(grid, row, col):
                 return True
         grid[row][col] = 0
     return False
- 
+
 '''0 means the cells where no value is assigned'''
 grid = [[2, 5, 0, 0, 3, 0, 9, 0, 1],
         [0, 1, 0, 0, 0, 4, 0, 0, 0],
